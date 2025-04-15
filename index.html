@@ -1,0 +1,73 @@
+
+<header style="text-align: center; margin-bottom: 20px;">
+    <h2 style="color: #32CD32;">kader11000</h2>
+</header>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vulnerability Scanner</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #32CD32;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .form-container {
+            background-color: #1c1c1c;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .btn-custom {
+            background-color: #32CD32;
+            border: none;
+            color: #121212;
+            font-weight: bold;
+        }
+        .btn-custom:hover {
+            background-color: #228B22;
+        }
+        .terminal {
+            background-color: #000000;
+            color: #00FF00;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            margin-top: 20px;
+            height: 400px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Vulnerability Scanner</h1>
+        <div class="form-container">
+            <form action="/scan" method="POST">
+                <div class="mb-3">
+                    <label for="target" class="form-label">Enter Target URL</label>
+                    <input type="text" class="form-control" id="target" name="target" required>
+                </div>
+                <div class="mb-3">
+                    <label for="tool" class="form-label">Select Tool</label>
+                    <select class="form-select" id="tool" name="tool" required>
+                        <option value="nikto">Nikto</option>
+                        <option value="nmap">Nmap</option>
+                        <option value="sublist3r">Sublist3r</option>
+                        <option value="dirb">Dirb</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-custom">Start Scan</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
